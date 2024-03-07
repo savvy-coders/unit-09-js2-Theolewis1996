@@ -1,3 +1,25 @@
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+greet("TJ");
+
+function calculateSum(a, b) {
+    return a+b;
+}
+let sum = calculateSum(1, 2); 
+    console.log(sum);
+
+    function outerFunction() {
+        let x = 10;
+        
+        function innerFunction() {
+            console.log(x);
+        }
+        innerFunction();
+    }
+    outerFunction();
+
 // JavaScript Coding Challenge
 
 // 1. Create a function named 'greet' that takes one parameter 'name'. 
