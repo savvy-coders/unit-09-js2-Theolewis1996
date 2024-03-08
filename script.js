@@ -1,3 +1,66 @@
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+greet("TJ");
+
+function calculateSum(a, b) {
+    return a+b;
+}
+
+let sum = calculateSum(1, 2); 
+    console.log(sum);
+
+    function outerFunction() {
+        let x = 10;
+        
+        function innerFunction() {
+            console.log(x);
+        }
+        innerFunction();
+    }
+    outerFunction();
+
+    function outerFunctionTwo() {
+        let x = 10;
+        
+        function innerFunctionTwo() {
+            console.log(x);
+        }
+        return innerFunctionTwo;
+    }
+    let closure = outerFunctionTwo();
+    closure();
+        console.log(closure);
+
+function handleClick(event) {
+    console.log("Button clicked");
+    console.log("Event type: ", event.type);
+    console.log("Target element: ", event.target);
+}
+const button = document.querySelector('#myButton');
+button.addEventListener("click", handleClick);
+
+function handleClickStopPropagation(event) {
+    event.stopPropagation();
+    console.log("Button clicked");
+    console.log("Event type: ", event.type);
+    console.log("Target element: ", event.target);
+}
+const propagating = document.querySelector('#myButton');
+propagating.addEventListener("click", handleClickStopPropagation);
+
+function createNewElement() {
+    const newElement = document.createElement('div');
+    newElement.className = 'myClass';
+    newElement.innerHTML = 'New element';
+    console.log(newElement.innerHTML);
+}
+
+const parentElement = document.getElementById('parentElementId');
+parentElement.appendChild(newElement);
+newElement.addEventListener("mouseover", "Mouse over new element!");
+
 // JavaScript Coding Challenge
 
 // 1. Create a function named 'greet' that takes one parameter 'name'. 
